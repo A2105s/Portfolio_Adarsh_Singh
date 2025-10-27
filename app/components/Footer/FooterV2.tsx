@@ -86,7 +86,7 @@ export const FooterV2: React.FC = () => {
           </div>
           <span className="text-[#b8b8b8]">© 2026 Adarsh Singh</span>
         </div>
-        <h2 className="large-brand-text absolute -bottom-16 left-0 flex w-full items-center justify-center font-medium whitespace-nowrap text-white md:text-[180px] lg:text-[240px]">
+        <h2 className="large-brand-text absolute -bottom-16 left-0 flex w-full items-center justify-center text-center font-medium text-white md:whitespace-nowrap md:text-[180px] lg:text-[240px]">
           Adarsh Singh
         </h2>
       </div>
