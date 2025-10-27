@@ -28,7 +28,7 @@ export const socialLinks = [
 export const FooterV2: React.FC = () => {
   return (
     <footer className="relative overflow-hidden bg-black">
-      <div className="xs:pb-32 mx-auto flex w-full max-w-6xl flex-col gap-12 px-5.5 pt-12 pb-24 text-white sm:pb-40 md:gap-16 md:px-11 md:pt-16 lg:pb-54">
+      <div className="xs:pb-32 relative mx-auto flex w-full max-w-6xl flex-col gap-12 px-5.5 pt-12 pb-24 text-white sm:pb-40 md:gap-16 md:px-11 md:pt-16 lg:pb-54">
         <div className="flex flex-col gap-8 md:gap-12">
           <H2 className="text-5xl leading-12 text-white md:text-6xl md:leading-14">
             Lets&nbsp;
@@ -86,7 +86,7 @@ export const FooterV2: React.FC = () => {
           </div>
           <span className="text-[#b8b8b8]">© 2026 Adarsh Singh</span>
         </div>
-        <h2 className="large-brand-text absolute -bottom-16 left-0 flex w-full items-center justify-center text-center font-medium text-white md:whitespace-nowrap md:text-[180px] lg:text-[240px]">
+        <h2 className="large-brand-text absolute -bottom-4 left-0 flex w-full items-center justify-center text-center font-medium text-white sm:-bottom-8 md:-bottom-12 md:whitespace-nowrap md:text-[180px] lg:-bottom-16 lg:text-[240px]">
           Adarsh Singh
         </h2>
       </div>

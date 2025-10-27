@@ -18,7 +18,7 @@ export const WorkHero: React.FC = () => {
           delay={0.6}
           className="max-w-xs text-center text-sm leading-tight tracking-tight text-slate-700 md:max-w-sm md:pr-4 md:text-base"
         >
-          A collection of what I&apos;ve actually built - from open-source libraries like React Zero-UI to production apps. See Case Studies for more details.
+          A showcase of ideas shaped into systems — spanning AI, design, and engineering. Each project tells a story of exploration, intent, and precision.
         </AnimatedElement>
       </div>
     </div>

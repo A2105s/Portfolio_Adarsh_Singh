@@ -1,14 +1,10 @@
 import { StaticImageData } from "next/image"
 import { Card } from "@/app/components/ProjectCard/Card"
-import iaoPreview from "@/app/images/iao-preview-v2.webp"
-import bespokePreview from "@/app/images/bespoke-preview-v2.webp"
-import automedicsPreview from "@/app/images/automedics-preview-v2.webp"
-import entitledPreview from "@/app/images/entitled-preview-v2.webp"
-import IconSpritePreview from "@/app/images/zero-icon-sprite-preview.jpg"
-import zeroPreview from "@/app/images/react-zero-ui-preview.jpg"
-import vetsChoiceInsurancePreview from "@/images/vets-choice-insurance-preview.webp"
+import iaoPreview from "@/app/images/amiod_.png"
+import bespokePreview from "@/app/images/amicall_.png"
+import automedicsPreview from "@/app/images/amievents_1.png"
+import zeroPreview from "@/app/images/amiarchive_.png"
 import { Link } from "@/app/utils/Link"
-import { externalLinks, SITE_SLUGS } from "@/config/siteConfig"
 
 type StaticProject = {
   id: string
@@ -27,87 +23,50 @@ export const STATIC_PROJECTS: StaticProject[] = [
   {
     id: "react-zero-ui",
     src: zeroPreview,
-    alt: "React-Zero-UI - Preview",
+    alt: "AmiArchive - Preview",
     color: "#3B06D1",
-    type: "Zero Re-Render State Library",
-    text: "View on GitHub",
-    href: externalLinks.zeroCore,
-    dataText: "View on GitHub",
-    ariaLabel: "View React Zero UI on GitHub",
+    type: "Study Materials",
+    text: "Visit Web App",
+    href: "https://amiarchive.vercel.app",
+    dataText: "Visit Web App",
+    ariaLabel: "Visit AmiArchive Web App",
     isExternal: true,
   },
   {
-    id: "bespoke",
+    id: "amicall",
     src: bespokePreview,
-    alt: "Bespoke Preview",
+    alt: "AmiCall Preview",
     color: "#024EFC",
-    type: "Automotive Styling Website",
-    text: "See Case Study",
-    href: SITE_SLUGS.projectLinks.bespoke,
-    dataText: "See Case Study",
-    ariaLabel: "See Bespoke Website Build Case Study",
-    isExternal: false,
-  },
-  {
-    id: "vets-choice",
-    src: vetsChoiceInsurancePreview,
-    alt: "Vets Choice Insurance Preview",
-    color: "#DA961AA5",
-    type: "Pet Insurance Website",
-    text: "View Website",
-    href: externalLinks.vetsChoice,
-    dataText: "View Website",
-    ariaLabel: "View Vets Choice Insurance Website",
-    isExternal: true,
-  },
-  {
-    id: "zero-icon-sprite",
-    src: IconSpritePreview,
-    alt: "Zero-Icon-Sprite Preview",
-    color: "#3B06D1A5",
-    type: "SVG Build Tool",
+    type: "Offline Attendance",
     text: "View on GitHub",
-    href: externalLinks.zeroIconSprite,
+    href: "https://github.com/A2105s/AmiCall",
     dataText: "View on GitHub",
-    ariaLabel: "View React Zero UI Icon Sprite on GitHub",
+    ariaLabel: "View AmiCall on GitHub",
+    isExternal: true,
+  },
+  {
+    id: "amievents",
+    src: automedicsPreview,
+    alt: "AmiEvents Preview",
+    color: "#000000",
+    type: "Event Management",
+    text: "Visit Web App",
+    href: "https://amievents.vercel.app",
+    dataText: "Visit Web App",
+    ariaLabel: "Visit AmiEvents Web App",
     isExternal: true,
   },
 
   {
-    id: "automedics",
-    src: automedicsPreview,
-    alt: "Automedics Preview",
-    color: "#000000",
-    type: "Automotive Repair Website",
-    text: "See Case Study",
-    href: SITE_SLUGS.projectLinks.automedics,
-    dataText: "See Case Study",
-    ariaLabel: "See Automedics Website Build Case Study",
-    isExternal: false,
-  },
-
-  {
-    id: "iron-oak",
+    id: "amiod",
     src: iaoPreview,
-    alt: "IAO Preview",
+    alt: "AmiOD Preview",
     color: "#13739C",
-    type: "Private Security Website",
-    text: "See Case Study",
-    href: SITE_SLUGS.projectLinks.iao,
-    dataText: "See Case Study",
-    ariaLabel: "See Iron & Oak Website Build Case Study",
-    isExternal: false,
-  },
-  {
-    id: "entitled",
-    src: entitledPreview,
-    alt: "Entitled Preview",
-    color: "#DA961AA5",
-    type: "Event Management Web App",
-    text: "View Website",
-    href: externalLinks.entitled,
-    dataText: "View Website",
-    ariaLabel: "View Entitled Website",
+    type: "Amity OD Automation",
+    text: "Visit Web App",
+    href: "https://amiod.vercel.app",
+    dataText: "Visit Web App",
+    ariaLabel: "Visit AmiOD Web App",
     isExternal: true,
   },
 ]

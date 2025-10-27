@@ -45,9 +45,9 @@ export const SITE_SLUGS = {
   contact: "/#contact",
   about: "/#about",
   projectLinks: {
-    iao: "/projects/iron-and-oak",
-    automedics: "/projects/automedics",
-    bespoke: "/projects/bespoke",
+    // iao: "/projects/iron-and-oak", // removed: no longer linking to internal case study
+    // automedics: "/projects/automedics", // removed: no longer linking to internal case study
+    // bespoke: "/projects/bespoke", // removed
   },
 } as const
 

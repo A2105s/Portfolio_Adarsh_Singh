@@ -21,43 +21,26 @@ const projectsData: ProjectItem[] = [
     type: "SoftwareSourceCode",
   },
   {
-    name: "Bespoke Tint & PPF",
-    url: SITE_SLUGS.projectLinks.bespoke, // internal case study
-    external: "https://www.bespokeauto.org", // client site
+    name: "AmiArchive",
+    url: "https://amiarchive.vercel.app", // external canonical
     date: "2025-03-11",
-    description: "Automotive Styling Website",
-    type: "WebSite",
+    description: "Study Materials Web App",
+    type: "WebApplication",
   },
 
   {
-    name: "Automedics",
-    url: SITE_SLUGS.projectLinks.automedics, // internal case study
-    external: "https://www.automedicskirkland.com",
+    name: "AmiEvents",
+    url: "https://amievents.vercel.app", // external canonical
     date: "2024-12-02",
-    description: "Automotive Repair Website",
-    type: "WebSite",
+    description: "Event Management Web App",
+    type: "WebApplication",
   },
   {
-    name: "Iron & Oak",
-    url: SITE_SLUGS.projectLinks.iao, // internal case study
-    external: "https://ironandoaksecurity.com",
+    name: "AmiOD",
+    url: "https://amiod.vercel.app", // external canonical
     date: "2024-06-15",
-    description: "Private Security Website",
-    type: "WebSite",
-  },
-  {
-    name: "Vets Choice Insurance",
-    url: externalLinks.vetsChoice, // external canonical
-    date: "2025-05-20",
-    description: "Pet Insurance Website",
-    type: "WebSite",
-  },
-  {
-    name: "Zero Icon Sprite",
-    url: externalLinks.zeroIconSprite, // external canonical
-    date: "2024-06-15",
-    description: "SVG Build Tool",
-    type: "SoftwareApplication",
+    description: "Amity OD Automation Web App",
+    type: "WebApplication",
   },
   {
     name: "Entitled",

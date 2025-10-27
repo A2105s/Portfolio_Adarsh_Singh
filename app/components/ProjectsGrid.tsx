@@ -1,16 +1,15 @@
 "use client"
 import { AnimatedCard, HeroOffset } from "./ProjectCard/AnimatedCard"
-import iaoPreview from "@/app/images/iao-preview-v2.webp"
-import bespokePreview from "@/app/images/bespoke-preview-v2.webp"
-import automedicsPreview from "@/app/images/automedics-preview-v2.webp"
-import reactZeroUIPreview from "@/app/images/react-zero-ui-preview.jpg"
+import iaoPreview from "@/app/images/amiod_.png"
+import bespokePreview from "@/app/images/amicall_.png"
+import automedicsPreview from "@/app/images/amievents_1.png"
+import reactZeroUIPreview from "@/app/images/amiarchive_.png"
 import clsx from "clsx"
 import { useOffset } from "../hooks/useOffset"
 import { useIsMobile } from "../hooks/useMediaQuery"
 import { useRef, useEffect } from "react"
 import { useScroll, useSpring } from "motion/react"
 import { useUI } from "@react-zero-ui/core"
-import { externalLinks } from "@/config/siteConfig"
 
 const ids = ["automedics", "react-zero-ui", "iron-and-oak", "bespoke"]
 
@@ -71,48 +70,51 @@ export function ProjectsGrid({ className }: { className?: string }) {
         <AnimatedCard
           key={"react-zero-ui"}
           src={reactZeroUIPreview}
-          alt={"React-Zero-UI - Preview"}
+          alt={"AmiArchive - Preview"}
           offset={offsets["react-zero-ui"]}
           gridId="react-zero-ui"
           color="#3B06D1"
-          type="Zero Re-Render State Library"
+          type="Study Materials"
           progress={progress}
-          href={externalLinks.zeroCore}
-          dataText="View on GitHub"
+          href="https://amiarchive.vercel.app"
+          dataText="Visit Web App"
         />
         <AnimatedCard
-          key="Bespoke"
+          key="AmiCall"
           src={bespokePreview}
-          alt={"Bespoke Preview"}
+          alt={"AmiCall Preview"}
           offset={offsets["bespoke"]}
           gridId="bespoke"
           color="#024EFC"
-          type="Automotive Styling"
+          type="Offline Attendance"
           progress={progress}
-          dataText="View Case Study"
+          href="https://github.com/A2105s/AmiCall"
+          dataText="View on GitHub"
         />
 
         <AnimatedCard
-          key="Automedics"
+          key="AmiEvents"
           src={automedicsPreview}
-          alt={"Automedics Preview"}
+          alt={"AmiEvents Preview"}
           offset={offsets["automedics"]}
           gridId="automedics"
           color="#DA961A"
-          type="Automotive Repair"
+          type="Event Management"
           progress={progress}
-          dataText="View Case Study"
+          href="https://amievents.vercel.app"
+          dataText="Visit Web App"
         />
         <AnimatedCard
-          key={"IAO"}
+          key={"AmiOD"}
           src={iaoPreview}
-          alt={"IAO Preview"}
+          alt={"AmiOD Preview"}
           offset={offsets["iron-and-oak"]}
           gridId="iron-and-oak"
           color="#13739C"
-          type="Private Security"
+          type="Amity OD Automation"
           progress={progress}
-          dataText="View Case Study"
+          href="https://amiod.vercel.app"
+          dataText="Visit Web App"
         />
       </div>
     </section>
