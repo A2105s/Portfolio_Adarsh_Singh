@@ -1,5 +1,6 @@
 import Image from "next/image"
 import profilePhoto from "@/app/images/Adarsh.png"
+import cvIcon from "@/app/images/CV.png"
 import clsx from "clsx"
 import type { Variants } from "motion"
 import { MotionButton, MotionDiv } from "@/app/utils/lazy-ui"
@@ -106,13 +107,12 @@ export const CallToActionButton = () => {
               <Image src={profilePhoto} alt="Adarsh Singh profile photo" fill sizes="50px" className="rounded-full object-cover ring-2 ring-white/75" />
             </div>
 
-            {/* + Page entrance */}
+            {/* + CV Icon entrance */}
             <MotionDiv variants={youVariants} className={clsx("hidden items-center gap-1 md:flex")}> 
               <span className="text-xl">+</span>
-              <Icon
-                name="page"
-                className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-sm font-semibold text-black ring-1 ring-black/50"
-              />
+              <div className="relative h-7 w-7 rounded-full bg-white ring-1 ring-black/50 flex items-center justify-center overflow-hidden">
+                <Image src={cvIcon} alt="CV icon" fill className="object-cover" />
+              </div>
             </MotionDiv>
           </div>
           Resume

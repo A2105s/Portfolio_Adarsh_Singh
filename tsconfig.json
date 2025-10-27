@@ -24,9 +24,7 @@
       "@/*": ["./*"],
       "@/images/*": ["./app/images/*"],
       "@zero-ui/attributes": ["./.zero-ui/attributes.js"]
-    },
-    "baseUrl": ".",
-    "ignoreDeprecations": "6.0"
+    }
   },
   "include": ["**/*.ts", "**/*.tsx", ".next/**/*.d.ts", ".next/types/**/*.ts", ".zero-ui/**/*.d.ts", "next-env.d.ts"],
   "exclude": ["node_modules"]

@@ -40,21 +40,14 @@ export const AboutSectionV2 = ({ className = "" }: { className?: string }) => {
           {/* ---------------- right column ---------------- */}
           <Typography as="article" size="lg" className="[flex:1.5_0_0px] space-y-8 text-slate-500">
             <p>
-              <strong className="font-semibold text-slate-900">I build production systems and invent tools</strong> when the platform gets in the way. I created
-              <a href="https://github.com/react-zero-ui" target="_blank" rel="noopener">
-                {" "}
-                React Zero UI
-              </a>
-              . A ~350B micro-library that updates UI by flipping data-* attributes, eliminating React re-renders for UI state. This site runs on it.
+              <strong className="font-semibold text-slate-900">I&apos;m not defined by a single domain.</strong> I explore everything that challenges my mind and expands what&apos;s possible — from engineering and AI to design, systems, and beyond. My curiosity moves freely across disciplines, guided by a desire to create things that are intelligent, functional, and deeply human.
             </p>
 
             <p>
-              <strong className="font-semibold text-slate-900">I ship v1s in weeks and iterate in days</strong>. Leveraging tools server-first React, typed
-              APIs, background jobs, CI/CD, and observability. Small PRs, rapid feedback, no ceremony.
+              <strong className="font-semibold text-slate-900">I build ideas into systems and experiences</strong> that merge logic with emotion. Whether it&apos;s developing modern web architectures, designing intuitive interfaces, or experimenting with AI-driven automation, I see technology as a medium for meaning — not just mechanics.
             </p>
             <p>
-              <strong className="font-semibold text-slate-900">My core philosophy is simplicity</strong>. if complexity balloons, I delete it and design the
-              simpler path.
+              <strong className="font-semibold text-slate-900">My work is driven by clarity and intent.</strong> I observe, refine, and simplify until only what matters remains. I don&apos;t chase trends; I chase understanding — and I build to bring that understanding to life.
             </p>
 
             {/* signature */}

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useCallback, useEffect, useRef } from "react"
 import { ArrowRight } from "@react-zero-ui/icon-sprite"
 
 type Props = {
@@ -30,7 +30,7 @@ export function CarouselButtons({ total, desktopVis, autoPlayInterval, activeSta
   // RO for layout/viewport changes
 
   // ---------- helpers (no DOM queries; only use cached refs) ----------
-  const readState = () => {
+  const readState = useCallback(() => {
     const t = trackRef.current
     if (!t) {
       return { vis: desktopVis, start: 0, active: 1 }
@@ -40,49 +40,55 @@ export function CarouselButtons({ total, desktopVis, autoPlayInterval, activeSta
     const start = Number(cs.getPropertyValue("--carousel-idx").trim() || "0") || 0 // 0-based
     const active = Number(cs.getPropertyValue("--active").trim() || t.dataset.active || "1") || 1 // 1-based
     return { vis, start, active }
-  }
+  }, [desktopVis])
 
-  const writeStart = (s: number) => {
-    const t = trackRef.current
-    if (!t) return
-    const { vis } = readState()
-    const max = Math.max(0, total - vis)
-    const clamped = Math.max(0, Math.min(s, max))
-    // dedup
-    const current = Number(getComputedStyle(t).getPropertyValue("--carousel-idx").trim() || "0") || 0
-    if (clamped !== current) t.style.setProperty("--carousel-idx", String(clamped))
-  }
+  const writeStart = useCallback(
+    (s: number) => {
+      const t = trackRef.current
+      if (!t) return
+      const { vis } = readState()
+      const max = Math.max(0, total - vis)
+      const clamped = Math.max(0, Math.min(s, max))
+      // dedup
+      const current = Number(getComputedStyle(t).getPropertyValue("--carousel-idx").trim() || "0") || 0
+      if (clamped !== current) t.style.setProperty("--carousel-idx", String(clamped))
+    },
+    [total, readState],
+  )
 
-  const setActive = (target: number) => {
-    const t = trackRef.current
-    if (!t) return
+  const setActive = useCallback(
+    (target: number) => {
+      const t = trackRef.current
+      if (!t) return
 
-    // dedup: skip if already active
-    const cur = Number(t.dataset.active || "1")
-    if (cur === target) return
+      // dedup: skip if already active
+      const cur = Number(t.dataset.active || "1")
+      if (cur === target) return
 
-    // toggle DOM data-active using cached nodes
-    const prevEl = currentActiveElRef.current || t.querySelector<HTMLElement>('[data-active="true"]')
-    if (prevEl) prevEl.setAttribute("data-active", "false")
+      // toggle DOM data-active using cached nodes
+      const prevEl = currentActiveElRef.current || t.querySelector<HTMLElement>('[data-active="true"]')
+      if (prevEl) prevEl.setAttribute("data-active", "false")
 
-    const idx = target - 1 // data-i is 1-based in your markup
-    const nextEl = itemsRef.current[idx] || t.querySelector<HTMLElement>(`[data-i="${target}"]`)
-    if (nextEl) {
-      nextEl.setAttribute("data-active", "true")
-      currentActiveElRef.current = nextEl
-    }
+      const idx = target - 1 // data-i is 1-based in your markup
+      const nextEl = itemsRef.current[idx] || t.querySelector<HTMLElement>(`[data-i="${target}"]`)
+      if (nextEl) {
+        nextEl.setAttribute("data-active", "true")
+        currentActiveElRef.current = nextEl
+      }
 
-    // reflect track-level state
-    t.dataset.active = String(target)
-    t.style.setProperty("--active", String(target))
+      // reflect track-level state
+      t.dataset.active = String(target)
+      t.style.setProperty("--active", String(target))
 
-    // keep active in view using current vis/start snapshot (reads once)
-    const { vis, start } = readState()
-    const first = start + 1
-    const last = start + vis
-    if (target > last) writeStart(target - vis)
-    else if (target < first) writeStart(target - 1)
-  }
+      // keep active in view using current vis/start snapshot (reads once)
+      const { vis, start } = readState()
+      const first = start + 1
+      const last = start + vis
+      if (target > last) writeStart(target - vis)
+      else if (target < first) writeStart(target - 1)
+    },
+    [readState, writeStart],
+  )
 
   const next = () => {
     if (activeState) {
@@ -226,7 +232,7 @@ export function CarouselButtons({ total, desktopVis, autoPlayInterval, activeSta
     const mediaQuery = window.matchMedia("(min-width: 576px) and (max-width: 1024px)")
     mediaQuery.addEventListener("change", onResize)
     return () => mediaQuery.removeEventListener("change", onResize)
-  }, [total])
+  }, [total, setActive])
 
   return (
     <>
