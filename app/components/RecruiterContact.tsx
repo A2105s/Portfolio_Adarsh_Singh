@@ -5,7 +5,6 @@ import { Icon } from "./Icon"
 import profilePhoto from "@/app/images/Adarsh.png"
 import { SITE_NAP } from "@/config/siteConfig"
 import { Mail } from "@react-zero-ui/icon-sprite"
-import { BlackButtonLink } from "./ui/BlackButtonLink"
 import { WhiteButtonLink } from "./ui/WhiteButtonLink"
 
 export const RecruiterContact: React.FC = () => {
@@ -25,7 +24,7 @@ export const RecruiterContact: React.FC = () => {
             </div>
             <div className="flex flex-col items-start text-sm whitespace-nowrap text-slate-700">
               <h2 className="font-medium text-slate-900">Adarsh Singh</h2>
-              <p className="text-slate-500">Full-Stack - Frontend Focused</p>
+              <p className="text-slate-500">Full-Stack - AI/ML Focused</p>
             </div>
           </div>
 
@@ -37,22 +36,26 @@ export const RecruiterContact: React.FC = () => {
               <span className="text-slate-500">Let&apos;s chat.</span>
             </H3>
             <Text className="max-w-2xl text-center text-balance">
-              I build fast, accessible web apps with React, Next.js, and TypeScript. I&apos;m looking for teams that value product quality, performance, and
-              thoughtful UX.
+              I work on projects that blend design, intelligence, and engineering — creating tools and systems that make technology feel effortless. Whether it&apos;s web, AI, or product innovation, I&apos;m always open to thoughtful collaboration.
             </Text>
           </div>
 
           <div className="flex flex-wrap items-center gap-4 max-lg:justify-center">
-            <BlackButtonLink href={`mailto:${SITE_NAP.email}`}>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=officialadarsh.in@gmail.com&su=Let's Work Together&body=Hi Adarsh,%0D%0A%0D%0AI came across your portfolio and would love to discuss..."
+              className="bubble-hover button-shadow flex w-fit items-center gap-1 rounded-full bg-black px-4 py-3 text-sm font-medium whitespace-nowrap text-white hover:translate-y-0.5 hover:shadow-none"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Mail height={18} width={18} className="h-[18px] w-[18px] text-white" />
               Email me
-            </BlackButtonLink>
+            </a>
 
-            <WhiteButtonLink href={SITE_NAP.profiles.linkedIn}>
+            <WhiteButtonLink href={SITE_NAP.profiles.linkedIn} target="_blank">
               <Icon name="linkedin" height={18} width={18} className="h-[18px] w-[18px]" />
               LinkedIn
             </WhiteButtonLink>
-            <WhiteButtonLink href={SITE_NAP.profiles.github}>
+            <WhiteButtonLink href={SITE_NAP.profiles.github} target="_blank">
               <Icon name="github" height={18} width={18} className="h-[18px] w-[18px]" />
               GitHub
             </WhiteButtonLink>

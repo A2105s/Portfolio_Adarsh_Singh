@@ -1,6 +1,6 @@
 import { FooterV2 } from "./components/Footer/FooterV2"
 import localFont from "next/font/local"
-import "./globalsV2.css"
+import "@/app/globalsV2.css"
 import { Metadata } from "next"
 import { DOMAIN_URL, SITE_CONFIG } from "@/config/siteConfig"
 import { TopBarV2 } from "./components/TopBar/TopBarV2"
@@ -25,15 +25,20 @@ const switzer = localFont({
 })
 export const metadata: Metadata = {
   metadataBase: new URL(DOMAIN_URL),
-  title: SITE_CONFIG.title,
+  title: "Adarsh Singh - Portfolio",
   description: SITE_CONFIG.description,
-  icons: {
-    icon: '/Btab.png',
-  },
+  icons: [
+    { rel: "icon", url: "/favicon.ico", sizes: "any" },
+    { rel: "icon", url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    { rel: "icon", url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" }
+  ]
 }
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </head>
       <body {...bodyAttributes} className="relative min-w-[300px] bg-white" data-mobile-menu="closed" data-scrolled="up">
         <MotionWrapper>
           <DesktopCursor />
