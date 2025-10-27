@@ -124,7 +124,7 @@ export const BeforeAfterSlider: React.FC<BeforeAfterProps> = memo(
           springPosition.set(initialPosition)
         }, 600)
       }
-    }, [isInView])
+    }, [isInView, initialPosition, springPosition])
 
     return (
       <div
