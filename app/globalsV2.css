@@ -2,6 +2,8 @@
 @source not "../public/bespoke-hero.html";
 
 @custom-variant reveal-false ([data-reveal="false"] &);
+@custom-variant scrolled-up (body[data-scrolled="up"] &);
+@custom-variant scrolled-down (body[data-scrolled="down"] &);
 
 @custom-variant touch {
   @media ((any-hover: none) and (any-pointer: coarse)) {

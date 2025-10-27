@@ -1,6 +1,6 @@
 import Image from "next/image"
 import clsx from "clsx"
-import profilePhoto from "../images/profile.webp"
+import profilePhoto from "../images/Adarsh.png"
 import signature from "../images/Adarsh_eSign.png"
 import { Typography } from "../ui/Elements"
 import { AnimatedH2 } from "./ui/AnimatedH2"

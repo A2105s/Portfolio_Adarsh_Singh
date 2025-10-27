@@ -1,5 +1,6 @@
 import { ProjectData } from "@/app/data/project-data"
 import { DOMAIN_URL, SITE_CONFIG, SITE_NAP, SITE_SLUGS, externalLinks } from "./siteConfig"
+import headshot from "@/app/images/Adarsh.png"
 import type { Graph, ItemList } from "schema-dts"
 interface ProjectItem {
   name: string
@@ -210,7 +211,7 @@ export const siteGraph = {
       publisher: { "@id": `${SITE}#org` },
       inLanguage: "en",
     },
-    { "@type": "ImageObject", "@id": `${SITE}#headshot`, url: `${SITE}/profile.webp` },
+  { "@type": "ImageObject", "@id": `${SITE}#headshot`, url: `${SITE}${imgSrc(headshot)}` },
     { "@type": "ImageObject", "@id": `${SITE}#logo`, url: `${SITE}/serbyte-logo.png` },
   ],
 }

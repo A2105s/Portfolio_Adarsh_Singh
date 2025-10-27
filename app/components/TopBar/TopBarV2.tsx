@@ -18,9 +18,9 @@ export const TopBarV2: React.FC = () => {
           <div className="flex items-center gap-4 px-4 py-3 md:gap-8 md:py-2.5">
             {/* Logo */}
                         {/* <Icon name="logo" className="h-6 w-6" /> */}
-            <span className="flex h-full items-center">
+            <Link href={SITE_SLUGS.home} className="bubble-hover flex h-full items-center p-1 px-2">
               Adarsh Singh
-            </span>
+            </Link>
 
             {/* Desktop Navigation */}
             <ul className="md:scrolled-up:opacity-0 md:scrolled-up:max-w-0 md:scrolled-down:opacity-100 md:scrolled-down:max-w-96 hidden items-center gap-4 font-medium transition-all duration-300 ease-in-out md:flex">

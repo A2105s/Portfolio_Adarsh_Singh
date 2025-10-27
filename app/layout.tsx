@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(DOMAIN_URL),
   title: SITE_CONFIG.title,
   description: SITE_CONFIG.description,
+  icons: {
+    icon: '/Btab.png',
+  },
 }
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
