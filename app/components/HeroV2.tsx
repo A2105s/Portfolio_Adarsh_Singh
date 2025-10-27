@@ -29,14 +29,7 @@ export const HeroV2 = () => {
           </h1>
 
           <AnimatedElement element="p" delay={0.6} className="max-w-xs text-sm leading-snug tracking-tight text-slate-700 md:max-w-sm md:pr-4 md:text-base">
-            <strong className="font-semibold text-slate-900">Frontend-focused full stack developer.</strong> React & Next.js specialist. Creator of{" "}
-            <a href="https://github.com/react-zero-ui" target="_blank" rel="noopener" className="font-semibold text-slate-900">
-              React-Zero-UI
-            </a>
-            . Founder of{" "}
-            <a href="https://www.serbyte.net/" target="_blank" rel="noopener" className="font-semibold text-slate-900">
-              Serbyte Development
-            </a>
+            <strong className="font-semibold text-slate-900">AI-driven full stack engineer.</strong> Builder of intelligent systems and digital experiences. Exploring the harmony between technology, design, and human intent.
           </AnimatedElement>
 
           <CallToActionButton />

@@ -2,7 +2,7 @@ export const DOMAIN_URL = "https://www.austinserb.com"
 
 export const SITE_CONFIG = {
   title: "Adarsh Singh - Web Developer Portfolio | React & Next.js",
-  description: "Portfolio of Adarsh Singh, Gwalior-based full-stack engineer. Specializing in Next.js, React, TypeScript, and Tailwind CSS.",
+  description: "Portfolio of Adarsh Singh, an AI-driven full stack engineer building intelligent systems and digital experiences. Specializing in AI/ML, React, Next.js, and innovative tech solutions.",
   url: DOMAIN_URL ?? "http://localhost:3000",
   siteName: "Adarsh Singh",
   keywords: ["Adarsh Singh", "Serbyte", "React Zero-UI", "Next.js", "React", "TypeScript", "Full-Stack Engineer", "Gwalior"],
